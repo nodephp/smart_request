@@ -7,13 +7,14 @@ composer require forfire/smart_request
 ## use 
 ```
 use Smart\SmartRequest;
-
-$res = SmartRequest::request('get', 'https://api.douban.com/v2/book/search', ['q' => 'golang', 'start' => 0, 'count' => 1], [], [], true);
+$params = ['q' => 'golang', 'start' => 0, 'count' => 1];
+$res = SmartRequest::request('get', 'https://api.douban.com/v2/book/search',$params , [], [], true);
 ```
 
 ## desc
 
-|field|type|desc|example
+
+|field|type|desc|example|
 |---|---|---|---|---
 |method|string|request type|get/post
 |url|string|request url|https://api.douban.com/v2/book/search

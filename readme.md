@@ -12,14 +12,15 @@ $res = SmartRequest::request('get', 'https://api.douban.com/v2/book/search', ['q
 ```
 
 ## desc
-field|type|desc|example
----|---|---|---|---
-method|string|request type|get/post
-url|string|request url|https://api.douban.com/v2/book/search
-params|array|request params|['q' => 'golang', 'start' => 0, 'count' => 1]
-headers|array|request header|['Content-Type: application/json'] 
-options|array|curl options|
-needJson|bool|need json parse|default true
+
+|field|type|desc|example
+|---|---|---|---|---
+|method|string|request type|get/post
+|url|string|request url|https://api.douban.com/v2/book/search
+|params|array|request params|['q' => 'golang', 'start' => 0, 'count' => 1]
+|headers|array|request header|['Content-Type: application/json'] 
+|options|array|curl options|[CURLOPT_HEADER => 1,CURLOPT_RETURNTRANSFER => 1]
+|needJson|bool|need json parse|default true
 
 ## explames
 

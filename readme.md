@@ -32,10 +32,11 @@ $res = SmartRequest::request('post', 'https://api.douban.com/v2/book/search', $p
 ```
 
 ### add options
-
+```
 $params = ['fql' => ['tp' => 'note', 'con' => ['keywords' => '吃'], 'page' => ['start' => 0, 'num' => 1]]];
 $options = [CURLOPT_HEADER => 1,CURLOPT_RETURNTRANSFER => 1];
 $res = SmartRequest::request('post', 'https://api.douban.com/v2/book/search', $params, [], $options, true);
+```
 
 
 

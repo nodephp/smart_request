@@ -18,7 +18,7 @@ $res = SmartRequest::request('get', 'https://api.douban.com/v2/book/search',$par
 |E-mail|Jelly.K.Wang@qq.com
 
 |field|type|desc|example|
-|---|---|---|---|---
+|---|---|---|---
 |method|string|request type|get/post
 |url|string|request url|https://api.douban.com/v2/book/search
 |params|array|request params|['q' => 'golang', 'start' => 0, 'count' => 1]

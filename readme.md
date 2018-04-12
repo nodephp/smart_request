@@ -13,9 +13,9 @@ $res = SmartRequest::request('get', 'https://api.douban.com/v2/book/search',$par
 
 ## desc
 
-|Author|果冻虾仁|
-|---|---
-|E-mail|Jelly.K.Wang@qq.com
+```php
+SmartRequest::request($method,$url,$params,$headers,$options,$needJosn)
+```
 
 |field|type|desc|example|
 |---|---|---|---

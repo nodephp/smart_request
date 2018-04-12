@@ -1,0 +1,15 @@
+{
+    "name": "forfire/smart_request",
+    "description": "http request with curl",
+    "authors": [
+        {
+            "name": "forfire",
+            "email": "forfire@foxmail.com"
+        }
+    ],
+    "autoload": {
+         "psr-4": {
+            "Smart\\": "src/"
+         }
+    }
+}

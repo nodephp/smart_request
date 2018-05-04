@@ -13,7 +13,6 @@ class SmartRequest
      * 设置timeout时间
      * @param int $connectTimeout  连接超时时间
      * @param int $curlTimeout  总超时时间
-     * @return mixed
      */
     public static function setTimeout($connectTimeout, $curlTimeout)
     {
@@ -31,7 +30,7 @@ class SmartRequest
      * @param bool $needJson 是否需要json解析
      * @return mixed
      */
-    public static function request($method, $url, $params = [], $headers = [], $addOptions = [], $needJson = true)
+    public static function request($method, $url, $params = [], $headers = [], $addOptions = [], $needJson = true, $urlEncode = true)
     {
         if (!$url || !function_exists('curl_init')) {
             return false;
@@ -42,7 +41,14 @@ class SmartRequest
         }
         if ($params) {
             if ($method == 'get') {
-                $str_param = http_build_query($params);
+                if ($urlEncode) {
+                    $str_param = http_build_query($params);
+                } else {
+                    foreach ($params as $field => $value) {
+                        $str_params[] = $filed . '=' . $value;
+                    }
+                    $str_param = implode('&', $str_params);
+                }
                 if (strpos($url, "?") !== false) {
                     $url = $url . "&" . $str_param;
                 } else {
